@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>正規表現チートシート | Regex Cheatsheet</title>
+  <meta name="description" content="ライブテスター付き正規表現チートシート。40+ カテゴリ別パターン解説 + 20+ 実用パターン。Interactive regex cheatsheet with live tester on every entry." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-branding">
+        <h1 id="site-title">正規表現チートシート</h1>
+        <p id="site-subtitle">ライブテスター付き 40+ パターン解説 &amp; 20+ 実用パターン</p>
+      </div>
+      <div class="header-controls">
+        <button id="lang-toggle" class="ctrl-btn" type="button">English</button>
+        <button id="theme-toggle" class="ctrl-btn" type="button">Light mode</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+
+    <!-- Common Patterns Section -->
+    <section class="section" id="common-section">
+      <h2 id="common-section-title" class="section-title">実用パターン</h2>
+      <!-- Inline tester -->
+      <div id="inline-tester" class="inline-tester">
+        <div class="tester-title-row">
+          <span class="tester-icon">⌕</span>
+          <span class="tester-title">Pattern Tester</span>
+        </div>
+        <div class="tester-fields">
+          <div class="tester-field-row">
+            <label class="tester-label" for="tester-pattern">Pattern</label>
+            <div class="pattern-wrap">
+              <span class="regex-slash">/</span>
+              <input
+                id="tester-pattern"
+                class="pattern-input"
+                type="text"
+                spellcheck="false"
+                autocomplete="off"
+                placeholder="e.g. \d{4}-\d{2}-\d{2}"
+              />
+              <span class="regex-slash">/</span>
+              <input
+                id="tester-flags"
+                class="flags-input"
+                type="text"
+                spellcheck="false"
+                maxlength="6"
+                placeholder="g"
+                value="g"
+              />
+              <button id="tester-copy" class="copy-btn" type="button">コピー</button>
+            </div>
+          </div>
+          <div class="tester-field-row">
+            <label class="tester-label" for="tester-text">Test string</label>
+            <textarea
+              id="tester-text"
+              class="test-textarea tester-textarea-tall"
+              rows="3"
+              spellcheck="false"
+              placeholder="Test your pattern here…"
+            ></textarea>
+          </div>
+        </div>
+        <div class="tester-output-row">
+          <span id="tester-badge" class="match-badge"></span>
+          <pre id="tester-output" class="match-output tester-output-pre" aria-live="polite"></pre>
+          <div id="tester-groups" class="groups-row"></div>
+          <div id="tester-explain" class="explain-row"></div>
+        </div>
+      </div>
+
+      <div id="common-patterns-grid" class="common-patterns-grid"></div>
+    </section>
+
+    <!-- Reference Section -->
+    <section class="section" id="reference-section">
+      <h2 id="reference-section-title" class="section-title">パターン解説</h2>
+      <nav id="category-nav" class="category-nav" aria-label="Filter by category"></nav>
+      <div id="reference-container" class="reference-container"></div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Built by <a href="https://sen.ltd" target="_blank" rel="noopener">SEN LLC</a> &middot;
+      <a href="https://github.com/masaru87/regex-cheatsheet" target="_blank" rel="noopener">GitHub</a>
+    </p>
+  </footer>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
