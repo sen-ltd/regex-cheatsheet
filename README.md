@@ -54,3 +54,10 @@ tests/
 ## License
 
 MIT © 2026 SEN LLC (SEN 合同会社)
+
+<!-- sen-publish:links -->
+## Links
+
+- 🌐 Demo: https://sen.ltd/portfolio/regex-cheatsheet/
+- 📝 dev.to: https://dev.to/sendotltd/a-regex-cheatsheet-where-every-entry-has-its-own-live-tester-1gi1
+<!-- /sen-publish:links -->
